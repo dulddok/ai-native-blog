@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 type Author = {
   name: string
   bio: string
@@ -9,7 +7,7 @@ type Author = {
 export function AuthorProfile({ author }: { author: Author }) {
   return (
     <div className="flex items-center gap-4 mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-700">
-      <Image
+      <img
         src={author.avatarUrl}
         alt={author.name}
         width={64}
