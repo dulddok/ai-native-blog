@@ -3,6 +3,7 @@ import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
 import { AuthorProfile } from 'app/components/AuthorProfile'
+import { LikeButton } from 'app/components/LikeButton'
 
 export async function generateStaticParams() {
   let posts = getBlogPosts()
@@ -96,6 +97,7 @@ export default async function Blog({ params }) {
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
+      <LikeButton slug={slug} />
       <AuthorProfile
         author={{
           name: 'John Doe',
