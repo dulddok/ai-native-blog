@@ -15,6 +15,9 @@ export function AuthorProfile({ author }: { author: Author }) {
         width={64}
         height={64}
         className="rounded-full object-cover"
+        onError={(e) => {
+          e.currentTarget.src = '/images/avatar.png'
+        }}
       />
       <div>
         <p className="font-bold text-neutral-900 dark:text-neutral-100">
